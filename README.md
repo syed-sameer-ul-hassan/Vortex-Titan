@@ -32,7 +32,7 @@ VORTEX TITAN is developed with an **enterprise-first, safety-driven philosophy**
 
 ## 🏷️ Project Information
 
-```text
+
 Project Name : VORTEX TITAN
 Author       : Syed Sameer Ul Hassan
 License      : MIT
