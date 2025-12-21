@@ -1,0 +1,12 @@
+system:
+  environment: "lab"
+  db_path: "var/db/vortex.sqlite"
+  log_level: "INFO"
+
+limits:
+  max_hosts: 50
+  max_runtime_sec: 600
+  risk_budget: "low"
+
+reporting:
+  dashboard_path: "reports/dashboard.html"

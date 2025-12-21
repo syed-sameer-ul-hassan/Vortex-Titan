@@ -1,0 +1,5 @@
+groups:
+  web_servers:
+    - user: "admin"
+      host: "127.0.0.1"
+      key: "~/.ssh/id_rsa"

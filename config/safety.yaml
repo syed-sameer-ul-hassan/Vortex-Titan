@@ -1,0 +1,7 @@
+allowlist_cidrs:
+  - "127.0.0.1/32"
+  - "192.168.0.0/16"
+  - "10.0.0.0/8"
+
+blocked_prod: ["rm", "dd", "shutdown", "reboot", "mkfs"]
+blocked_lab: ["rm -rf /", ":(){:|:&};:"]

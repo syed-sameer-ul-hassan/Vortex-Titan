@@ -1,0 +1,84 @@
+
+    <html>
+    <head><title>VORTEX TITAN Dashboard</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; }
+        table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #333; color: white; }
+        tr:nth-child(even) { background-color: #f2f2f2; }
+    </style>
+    </head>
+    <body>
+        <h1>VORTEX TITAN: Operations Report</h1>
+        <h3>Total Events: 4</h3>
+        <h3>Detection Rate: 50.0%</h3>
+        <table border="1" class="dataframe table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>id</th>
+      <th>campaign_id</th>
+      <th>step_name</th>
+      <th>target</th>
+      <th>red_output</th>
+      <th>blue_detected</th>
+      <th>blue_evidence</th>
+      <th>score_fidelity</th>
+      <th>score_ttd</th>
+      <th>timestamp</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>71bbbc05-192f-4022-950b-acaa5996f927</td>
+      <td>step_sim_exploit</td>
+      <td>127.0.0.1</td>
+      <td>{'status': 'success', 'payload': 'SIMULATED EXPLOIT CVE-2025-9999', 'artifact': '/tmp/vortex_artifact_CVE-2025-9999.log'}</td>
+      <td>0</td>
+      <td>Log missing</td>
+      <td>0.0</td>
+      <td>99.499925</td>
+      <td>2025-12-21T22:24:29.863468</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>71bbbc05-192f-4022-950b-acaa5996f927</td>
+      <td>step_persistence</td>
+      <td>127.0.0.1</td>
+      <td>{'status': 'success', 'out': ''}</td>
+      <td>1</td>
+      <td>Found Persistence</td>
+      <td>60.0</td>
+      <td>99.499820</td>
+      <td>2025-12-21T22:24:30.869058</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>2212590c-653c-41f0-8d22-646f91db833f</td>
+      <td>step_sim_exploit</td>
+      <td>127.0.0.1</td>
+      <td>{'status': 'success', 'payload': 'SIMULATED EXPLOIT CVE-2025-9999', 'artifact': '/tmp/vortex_artifact_CVE-2025-9999.log'}</td>
+      <td>0</td>
+      <td>Log missing</td>
+      <td>0.0</td>
+      <td>99.499932</td>
+      <td>2025-12-21T23:28:41.795328</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>2212590c-653c-41f0-8d22-646f91db833f</td>
+      <td>step_persistence</td>
+      <td>127.0.0.1</td>
+      <td>{'status': 'success', 'out': ''}</td>
+      <td>1</td>
+      <td>Found Persistence</td>
+      <td>60.0</td>
+      <td>99.499797</td>
+      <td>2025-12-21T23:28:42.805775</td>
+    </tr>
+  </tbody>
+</table>
+    </body>
+    </html>
+    

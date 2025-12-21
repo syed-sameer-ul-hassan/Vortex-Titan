@@ -1,0 +1,50 @@
+meta:
+  name: "Zero-Day Simulation & Branching Demo"
+  author: "Titan Architect"
+
+entry_point: "step_sim_exploit"
+
+steps:
+  - id: "step_sim_exploit"
+    target_role: "web_servers"
+    red:
+      plugin: "red_sim_exploit"
+      args:
+        cve_id: "CVE-2025-9999"
+    blue:
+      plugin: "blue_log"
+      args:
+        path: "/var/log/syslog"
+        pattern: "CVE-2025-9999"
+    
+    # LOGIC
+    next_if_detected: "step_cleanup"
+    next_if_missed: "step_persistence"
+
+  - id: "step_persistence"
+    target_role: "web_servers"
+    red:
+      plugin: "red_shell"
+      args:
+        cmd: "echo 'Persistence Established' >> /tmp/vortex_persist.log"
+    blue:
+      plugin: "blue_log"
+      args:
+        path: "/tmp/vortex_persist.log"
+        pattern: "Persistence"
+    next_if_detected: null
+    next_if_missed: null
+
+  - id: "step_cleanup"
+    target_role: "web_servers"
+    red:
+      plugin: "red_shell"
+      args:
+        cmd: "rm /tmp/vortex_artifact_*.log"
+    blue:
+      plugin: "blue_log"
+      args:
+        path: "/var/log/syslog"
+        pattern: "cleanup"
+    next_if_detected: null
+    next_if_missed: null
